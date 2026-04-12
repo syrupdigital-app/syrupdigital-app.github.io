@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kebijakan Privasi MapCatalog — aplikasi katalog properti untuk agen penjualan di Indonesia.">
+  <meta name="robots" content="index, follow">
+  <title>Kebijakan Privasi — MapCatalog</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-dark:  #0D2B4E;
+      --brand-blue:  #1A8FD1;
+      --brand-orange:#F5A623;
+      --bg:          #F5F7FA;
+      --surface:     #FFFFFF;
+      --text-main:   #1A1A2E;
+      --text-muted:  #5A6A7E;
+      --border:      #E0E6EF;
+      --sidebar-w:   260px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--brand-dark);
+      color: #fff;
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+    }
+    .logo-mark {
+      width: 44px; height: 44px;
+      background: var(--brand-blue);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 26px; height: 26px; fill: #fff; }
+    .header-text h1 {
+      font-size: 20px; font-weight: 700; letter-spacing: -0.3px;
+    }
+    .header-text p {
+      font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 2px;
+    }
+
+    /* ── Layout ── */
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: sticky;
+      top: 24px;
+    }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      padding: 16px 18px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-nav { list-style: none; padding: 8px 0; }
+    .sidebar-nav li a {
+      display: block;
+      padding: 9px 18px;
+      font-size: 13.5px;
+      color: var(--text-main);
+      text-decoration: none;
+      border-left: 3px solid transparent;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .sidebar-nav li a:hover {
+      background: #EBF2FB;
+      color: var(--brand-blue);
+    }
+    .sidebar-nav li a.active {
+      background: #EBF2FB;
+      border-left-color: var(--brand-blue);
+      color: var(--brand-blue);
+      font-weight: 600;
+    }
+    .sidebar-nav li a span {
+      display: inline-block;
+      width: 20px;
+      color: var(--brand-orange);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    /* ── Main content ── */
+    .content { min-width: 0; }
+
+    .meta-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .meta-bar .dot { color: var(--border); }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      scroll-margin-top: 28px;
+    }
+    .section-card:last-child { margin-bottom: 0; }
+
+    .section-number {
+      display: inline-block;
+      background: var(--brand-orange);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      letter-spacing: 0.4px;
+    }
+    .section-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .section-card p { margin-bottom: 12px; color: var(--text-main); }
+    .section-card p:last-child { margin-bottom: 0; }
+    .section-card ul {
+      margin: 8px 0 12px 20px;
+    }
+    .section-card ul li { margin-bottom: 6px; }
+    .section-card a { color: var(--brand-blue); text-decoration: none; }
+    .section-card a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: #EBF2FB;
+      border-left: 4px solid var(--brand-blue);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--brand-dark);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--brand-dark);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+    }
+    footer a { color: var(--brand-orange); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .footer-brand { font-weight: 600; color: #fff; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 24px 16px 60px;
+        gap: 24px;
+      }
+      .sidebar { position: static; }
+      .section-card { padding: 24px 20px; }
+      .header-inner { padding: 16px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>MapCatalog</h1>
+      <p>Kebijakan Privasi</p>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Daftar Isi</div>
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li><a href="#s1"><span>01</span>Pendahuluan</a></li>
+        <li><a href="#s2"><span>02</span>Data yang Dikumpulkan</a></li>
+        <li><a href="#s3"><span>03</span>Tujuan Penggunaan Data</a></li>
+        <li><a href="#s4"><span>04</span>Penyimpanan Data</a></li>
+        <li><a href="#s5"><span>05</span>Berbagi Data</a></li>
+        <li><a href="#s6"><span>06</span>Izin Perangkat</a></li>
+        <li><a href="#s7"><span>07</span>Layanan Pihak Ketiga</a></li>
+        <li><a href="#s8"><span>08</span>Keamanan Data</a></li>
+        <li><a href="#s9"><span>09</span>Hak Pengguna</a></li>
+        <li><a href="#s10"><span>10</span>Kontak</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="meta-bar">
+      <span>Berlaku sejak: 1 April 2025</span>
+      <span class="dot">•</span>
+      <span>Terakhir diperbarui: 11 April 2026</span>
+    </div>
+
+    <div class="section-card" id="s1">
+      <div class="section-number">01</div>
+      <h2>Pendahuluan</h2>
+      <p>Selamat datang di <strong>MapCatalog</strong>, aplikasi katalog properti berbasis peta yang dikembangkan oleh <strong>Syrup Digital</strong>. Aplikasi ini dirancang untuk membantu agen penjualan properti di Indonesia menampilkan dan berbagi informasi produk kepada calon pembeli secara efisien.</p>
+      <p>Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi Anda ketika menggunakan aplikasi MapCatalog di perangkat Android Anda.</p>
+      <div class="highlight-box">
+        Dengan menggunakan MapCatalog, Anda menyetujui praktik yang dijelaskan dalam Kebijakan Privasi ini. Mohon baca dokumen ini dengan seksama sebelum menggunakan aplikasi.
+      </div>
+    </div>
+
+    <div class="section-card" id="s2">
+      <div class="section-number">02</div>
+      <h2>Data yang Dikumpulkan</h2>
+      <p>MapCatalog mengumpulkan beberapa kategori data untuk memberikan layanan yang optimal:</p>
+      <ul>
+        <li><strong>Data Lokasi:</strong> Koordinat GPS perangkat Anda (latitude &amp; longitude) untuk menampilkan posisi Anda di peta dan menemukan properti terdekat. Data lokasi hanya diakses saat aplikasi aktif digunakan (<em>foreground only</em>).</li>
+        <li><strong>Data Properti:</strong> Informasi produk yang Anda tambahkan sendiri, termasuk nama, harga, deskripsi, status, foto, dan koordinat lokasi properti.</li>
+        <li><strong>Foto dan Media:</strong> Foto properti yang Anda unggah dari galeri perangkat, disimpan secara lokal di penyimpanan internal aplikasi.</li>
+        <li><strong>Data Profil Pengguna:</strong> Nama agen, nomor WhatsApp, dan nama perusahaan yang Anda isi secara manual di menu Profil.</li>
+        <li><strong>Data Teknis:</strong> Informasi perangkat (versi Android, model) yang dikumpulkan secara anonim oleh layanan iklan pihak ketiga (AdMob).</li>
+      </ul>
+    </div>
+
+    <div class="section-card" id="s3">
+      <div class="section-number">03</div>
+      <h2>Tujuan Penggunaan Data</h2>
+      <p>Data yang kami kumpulkan digunakan semata-mata untuk keperluan berikut:</p>
+      <ul>
+        <li>Menampilkan posisi Anda dan properti di atas peta interaktif</li>
+        <li>Menyimpan dan mengelola katalog properti Anda secara lokal</li>
+        <li>Menghasilkan brosur PDF dan pesan WhatsApp berisi informasi properti</li>
+        <li>Menampilkan iklan yang relevan melalui Google AdMob</li>
+        <li>Mengirim pembaruan aplikasi melalui mekanisme Google Play In-App Updates</li>
+      </ul>
+      <p>Kami <strong>tidak</strong> menggunakan data Anda untuk kepentingan pemasaran pihak ketiga, profiling komersial, atau tujuan lain di luar fungsi inti aplikasi.</p>
+    </div>
+
+    <div class="section-card" id="s4">
+      <div class="section-number">04</div>
+      <h2>Penyimpanan Data</h2>
+      <p>Seluruh data katalog properti, foto, dan profil pengguna disimpan <strong>secara lokal di perangkat Anda</strong> menggunakan Capacitor Filesystem API. Data ini tidak dikirimkan ke server eksternal milik Syrup Digital.</p>
+      <p>Lokasi penyimpanan:</p>
+      <ul>
+        <li>Database produk: file JSON di direktori privat aplikasi (<code>DATA</code> directory)</li>
+        <li>Foto properti: direktori <code>mapcatalog_photos/</code> di penyimpanan eksternal aplikasi</li>
+        <li>Preferensi pengguna: <code>localStorage</code> di WebView Capacitor</li>
+      </ul>
+      <div class="highlight-box">
+        Karena data disimpan lokal, menghapus atau menguninstall aplikasi akan menghapus semua data katalog Anda secara permanen. Lakukan backup secara berkala jika diperlukan.
+      </div>
+    </div>
+
+    <div class="section-card" id="s5">
+      <div class="section-number">05</div>
+      <h2>Berbagi Data dengan Pihak Ketiga</h2>
+      <p>MapCatalog <strong>tidak menjual, menyewakan, atau memperdagangkan</strong> data pribadi Anda kepada pihak mana pun. Berbagi data terjadi hanya dalam skenario berikut:</p>
+      <ul>
+        <li><strong>Berbagi oleh pengguna sendiri:</strong> Saat Anda menekan tombol "Bagikan via WhatsApp" atau "Ekspor PDF", data properti dibagikan melalui aplikasi yang Anda pilih. Proses ini sepenuhnya diinisiasi oleh Anda.</li>
+        <li><strong>Google AdMob:</strong> SDK iklan Google mungkin mengumpulkan identifikasi perangkat dan data penggunaan secara anonim untuk keperluan penayangan iklan. Lihat <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a> untuk detail lebih lanjut.</li>
+        <li><strong>Google Play Services:</strong> Digunakan untuk mekanisme pembaruan aplikasi otomatis (In-App Updates). Tidak ada data pribadi yang dikirimkan.</li>
+      </ul>
+    </div>
+
+    <div class="section-card" id="s6">
+      <div class="section-number">06</div>
+      <h2>Izin Perangkat yang Diminta</h2>
+      <p>MapCatalog meminta izin berikut saat dijalankan:</p>
+      <ul>
+        <li><strong>Lokasi (Fine Location):</strong> Diperlukan untuk menampilkan posisi GPS Anda di peta. Tanpa izin ini, fitur "Lokasi Saya" tidak akan berfungsi.</li>
+        <li><strong>Kamera / Baca Penyimpanan:</strong> Digunakan untuk memilih foto properti dari galeri. Aplikasi tidak mengakses galeri tanpa tindakan eksplisit dari Anda.</li>
+        <li><strong>Tulis ke Penyimpanan:</strong> Diperlukan untuk menyimpan file PDF yang diekspor ke perangkat Anda (Android 9 ke bawah).</li>
+        <li><strong>Internet:</strong> Dibutuhkan untuk memuat tile peta (OpenStreetMap, Esri), menampilkan iklan AdMob, dan pembaruan aplikasi.</li>
+      </ul>
+      <p>Semua izin dapat Anda kelola kapan saja melalui menu <strong>Pengaturan &gt; Aplikasi</strong> di perangkat Android Anda.</p>
+    </div>
+
+    <div class="section-card" id="s7">
+      <div class="section-number">07</div>
+      <h2>Layanan Pihak Ketiga</h2>
+      <p>MapCatalog mengintegrasikan layanan pihak ketiga berikut yang memiliki kebijakan privasi masing-masing:</p>
+      <ul>
+        <li><strong>OpenStreetMap &amp; Nominatim:</strong> Penyedia data peta dan layanan geocoding (pencarian alamat). Data pencarian lokasi Anda dapat dikirim ke server Nominatim untuk memproses hasil. Lihat <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Kebijakan Privasi OSM</a>.</li>
+        <li><strong>Esri (ArcGIS):</strong> Penyedia tile peta satelit. Permintaan tile dikirmkan ke server Esri. Lihat <a href="https://www.esri.com/en-us/privacy/overview" target="_blank" rel="noopener">Kebijakan Privasi Esri</a>.</li>
+        <li><strong>Google AdMob:</strong> Platform iklan mobile Google. Dapat mengumpulkan data perangkat anonim. Lihat <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.</li>
+        <li><strong>Google Play Core (In-App Updates):</strong> Digunakan untuk pembaruan aplikasi in-app tanpa menutup aplikasi.</li>
+      </ul>
+    </div>
+
+    <div class="section-card" id="s8">
+      <div class="section-number">08</div>
+      <h2>Keamanan Data</h2>
+      <p>Kami mengambil langkah-langkah yang wajar untuk melindungi data Anda, termasuk:</p>
+      <ul>
+        <li>Data katalog disimpan di direktori privat aplikasi yang tidak dapat diakses aplikasi lain tanpa root.</li>
+        <li>Komunikasi jaringan menggunakan HTTPS/TLS untuk semua permintaan eksternal.</li>
+        <li>Aplikasi tidak menyimpan kredensial pengguna (password, token autentikasi) karena tidak memerlukan akun.</li>
+      </ul>
+      <p>Namun, tidak ada metode transmisi atau penyimpanan elektronik yang 100% aman. Kami tidak dapat menjamin keamanan absolut atas data yang disimpan di perangkat Anda apabila perangkat tersebut hilang, dicuri, atau diakses pihak tidak berwenang.</p>
+    </div>
+
+    <div class="section-card" id="s9">
+      <div class="section-number">09</div>
+      <h2>Hak Pengguna</h2>
+      <p>Karena seluruh data disimpan secara lokal di perangkat Anda, Anda memiliki kendali penuh atas data tersebut:</p>
+      <ul>
+        <li><strong>Akses:</strong> Anda dapat melihat semua data katalog langsung melalui antarmuka aplikasi.</li>
+        <li><strong>Koreksi:</strong> Anda dapat mengedit atau memperbarui informasi produk dan profil kapan saja.</li>
+        <li><strong>Penghapusan:</strong> Anda dapat menghapus produk satu per satu, atau menghapus semua data dengan menguninstall aplikasi.</li>
+        <li><strong>Portabilitas:</strong> Data tersimpan dalam format JSON yang dapat diekspor (fitur akan tersedia di pembaruan mendatang).</li>
+      </ul>
+      <p>Untuk pertanyaan terkait data yang diproses oleh layanan pihak ketiga (AdMob, dll.), silakan hubungi penyedia layanan tersebut secara langsung.</p>
+    </div>
+
+    <div class="section-card" id="s10">
+      <div class="section-number">10</div>
+      <h2>Kontak</h2>
+      <p>Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan terkait Kebijakan Privasi ini, jangan ragu untuk menghubungi kami:</p>
+      <ul>
+        <li><strong>Pengembang:</strong> Syrup Digital</li>
+        <li><strong>Email:</strong> <a href="mailto:syrupdigital@gmail.com">syrupdigital@gmail.com</a></li>
+        <li><strong>Aplikasi:</strong> MapCatalog (Google Play Store)</li>
+      </ul>
+      <p>Kami akan berupaya merespons pertanyaan Anda dalam waktu 7 hari kerja.</p>
+      <div class="highlight-box">
+        Kebijakan Privasi ini dapat diperbarui sewaktu-waktu. Perubahan signifikan akan diinformasikan melalui pembaruan aplikasi. Tanggal "Terakhir diperbarui" di bagian atas halaman ini mencerminkan revisi terbaru.
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 <span class="footer-brand">Syrup Digital</span>. Semua hak dilindungi.</p>
+  <p style="margin-top:6px;">Pertanyaan? Hubungi <a href="mailto:syrupdigital@gmail.com">syrupdigital@gmail.com</a></p>
+</footer>
+
+<script>
+  // Highlight active sidebar item on scroll
+  (function () {
+    const sections = document.querySelectorAll('.section-card[id]');
+    const links = document.querySelectorAll('#sidebar-nav a');
+
+    function getActive() {
+      let active = null;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 80) active = sec.id;
+      });
+      return active || (sections[0] ? sections[0].id : null);
+    }
+
+    function updateNav() {
+      const id = getActive();
+      links.forEach(a => {
+        const href = a.getAttribute('href').slice(1);
+        a.classList.toggle('active', href === id);
+      });
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  })();
+</script>
+
+</body>
+</html>
